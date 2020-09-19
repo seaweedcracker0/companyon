@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Companyon</string>
+    <string name="title_activity_main">Companyon</string>
+    <string name="package_name">com.personal.companyon</string>
+    <string name="custom_url_scheme">com.personal.companyon</string>
+</resources>

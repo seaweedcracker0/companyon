@@ -1,0 +1,32 @@
+<ion-card>
+  <ion-card-header>
+    <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+    <ion-card-title>Base Settings</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <form [formGroup]="settingForm">
+        <ion-item>
+          <ion-label position="stacked">Hostname</ion-label>
+          <ion-input formControlName="hostName" type="text"
+            [class.invalid]="!settingForm.controls.hostName.valid">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Endpoint</ion-label>
+          <ion-input formControlName="endpoint" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Location</ion-label>
+          <ion-input formControlName="location" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">PIC</ion-label>
+          <ion-input formControlName="pic" type="text"></ion-input>
+        </ion-item>
+        <ion-button class="ion-margin-top ion-margin-bottom" expand="block" (click)="submitSetting()">Update</ion-button>
+      </form>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
