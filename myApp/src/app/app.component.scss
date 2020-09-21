@@ -1,0 +1,7 @@
+ion-router-outlet {
+    transform: scale(1) translate(0, 0);
+    transition: transform .5s;
+    &.open {
+        transform: scale(0.7) translate(-80%, 0);
+    }
+}

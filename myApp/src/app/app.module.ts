@@ -10,10 +10,22 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { StoreModule } from '@ngrx/store';
+import { headerOpenStateReducer } from './store/header/header.reducer';
+
+//Custom Component
+import { MegaMenuComponentModule } from './components/mega-menu/mega-menu.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    StoreModule.forRoot({headerOpenState: headerOpenStateReducer}),
+    MegaMenuComponentModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,

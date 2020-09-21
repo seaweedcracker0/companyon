@@ -5,6 +5,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomePage } from './home.page';
 
 //Custom Components
+import { HeaderComponent } from '../../components/header/header.component';
 import { TextBlockComponentModule } from '../../components/text-block/text-block.module';
 import { IframeLoaderComponentModule } from '../../components/iframe-loader/iframe-loader.module';
 
@@ -15,7 +16,7 @@ describe('HomePage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HomePage],
-      imports: [IonicModule.forRoot(), TextBlockComponentModule, IframeLoaderComponentModule]
+      imports: [IonicModule.forRoot(), HeaderComponent, TextBlockComponentModule, IframeLoaderComponentModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);

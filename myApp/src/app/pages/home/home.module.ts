@@ -10,6 +10,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 
 //Custom Components
+import { HeaderComponentModule} from '../../components/header/header.module';
 import { TextBlockComponentModule } from '../../components/text-block/text-block.module';
 import { IframeLoaderComponentModule } from '../../components/iframe-loader/iframe-loader.module';
 
@@ -24,6 +25,7 @@ import { Sim } from '@ionic-native/sim/ngx';
     HomePageRoutingModule,
     TextBlockComponentModule,
     IframeLoaderComponentModule,
+    HeaderComponentModule,
   ],
   declarations: [HomePage],
   providers: [Sim]
