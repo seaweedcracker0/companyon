@@ -15,6 +15,9 @@ import { headerOpenStateReducer } from './store/header/header.reducer';
 
 //Custom Component
 import { MegaMenuComponentModule } from './components/mega-menu/mega-menu.module';
+import { HttpClientModule }    from '@angular/common/http';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,15 +25,24 @@ import { MegaMenuComponentModule } from './components/mega-menu/mega-menu.module
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
+    IonicStorageModule.forRoot({
+      name: '__mydb',
+      driverOrder: ['localstorage', 'indexeddb', 'sqlite', 'websql']
+    }),
     AppRoutingModule, 
     StoreModule.forRoot({headerOpenState: headerOpenStateReducer}),
-    MegaMenuComponentModule
+    MegaMenuComponentModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     BarcodeScanner,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { 
+      provide: RouteReuseStrategy, 
+      useClass: IonicRouteStrategy 
+    },
+      NativeStorage
   ],
   bootstrap: [AppComponent]
 })

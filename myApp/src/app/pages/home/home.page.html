@@ -1,7 +1,7 @@
 <comp-header label="test"></comp-header>
 <ion-content>
   <!-- Text Block -->
-  <comp-text-block label="Hello! I am Home Tab"></comp-text-block>
+  <comp-text-block label="Hello, {{userName}}"></comp-text-block>
   <!-- Text Block -->
   <!-- <div class="custom-iframe-wrapper"> -->
     <!-- Floating Button -->
@@ -15,4 +15,5 @@
     <!-- <comp-iframe-loader [url]="iframeUrl"></comp-iframe-loader> -->
     <!-- IFrame -->
   <!-- </div> -->
+  <ion-button type="button" (click)="logout()" expand="full" color="primary">Logout</ion-button>
 </ion-content>
